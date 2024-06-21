@@ -30,6 +30,12 @@
         </div>
     </section>
 
+    <footer class="background">
+        <p class="text-footer">
+            2024 MMIWG Research Project
+        </p>
+    </footer>
+
     <script>
         function fetchData() {
         fetch('data/article_link_info.csv')
@@ -55,7 +61,7 @@
                         if (value.startsWith("http")) {
                             return `<a href="${value}" target="_blank">${value}</a>`;
                         } else {
-                            return value? value : "N/A";
+                            return value || "N/A";
                         }
                     });
                     tbody += '<tr>';
